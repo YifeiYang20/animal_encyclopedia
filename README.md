@@ -55,6 +55,9 @@ o	Product Backlog: list stories (features) under the Stories column on Scrumy.
   Product backlog items should be features, like "Take a picture and post on Facebook", not technical, like "Make the database"
 o	Sprint Backlog for Sprint #1
 	These should be technical tasks that are required to implement one of the features.
-•	Scrum Roles, and who will fill those roles
+•	Scrum Roles：
+	Yifei Yang - Scrum Master/Product Owner/Github admin, UI designer, programmer, Business Logic and Persistence
+	Zilong Chen - UI designer, programmer, Business Logic and Persistence
+	Cassandra Meyer -  UI designer, programmer, Business Logic and Persistence
 •	https://github.com/YifeiYang20/animal_encyclopedia  project link 
 
