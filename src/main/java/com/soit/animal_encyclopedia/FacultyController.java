@@ -28,6 +28,8 @@ public class FacultyController {
 			Faculty fac1 = new Faculty(1, "Cat", "Mammal");
 			Faculty fac2 = new Faculty(2, "Dog", "Mammal");
 			Faculty fac3 = new Faculty(3, "Fish", "Fish");
+			Faculty fac4 = new Faculty(4, "Rabbit", "Mammal");
+			Faculty fac5 = new Faculty(5, "Snake", "Reptiles");
 			
 			//Create our List
 			theFaculties  = new ArrayList();
@@ -36,6 +38,8 @@ public class FacultyController {
 			theFaculties.add(fac1);
 			theFaculties.add(fac2);
 			theFaculties.add(fac3);
+			theFaculties.add(fac4);
+			theFaculties.add(fac5);
 		}
 		
 		//Mapping for "/list"
