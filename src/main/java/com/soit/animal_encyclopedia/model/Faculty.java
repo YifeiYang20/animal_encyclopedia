@@ -7,8 +7,9 @@ public class Faculty {
 	private String type;
 	
 public Faculty() {
-	
-}
+		
+		
+	}
 
 public Faculty(int id, String name, String type) {
 	this.id = id;
