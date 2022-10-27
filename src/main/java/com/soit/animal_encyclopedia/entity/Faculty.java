@@ -1,9 +1,26 @@
-package com.soit.animal_encyclopedia.model;
+package com.soit.animal_encyclopedia.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="faculty")
 public class Faculty {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	
+	@Column(name="id")
 	private int id;
+	
+	@Column(name="name")
 	private String name;
+	
+	@Column(name="type")
 	private String type;
 	
 public Faculty() {
