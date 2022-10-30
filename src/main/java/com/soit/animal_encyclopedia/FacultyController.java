@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.soit.animal_encyclopedia.entity.Faculty;
 
-
+//The controller has the same problem and does not run. I recommend revising the  of the file.
+//I was not able to run it locally due to the database not set up properly.
 @Controller
 @RequestMapping("/Faculties")
 public class FacultyController {
