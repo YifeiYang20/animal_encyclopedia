@@ -6,7 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+//The file is name faculty still (Might be from our class and that is ok I did the same with ours.
+//I would recommend to change to a other name like Encyclopedia
 @Entity
 @Table(name="faculty")
 public class Faculty {
@@ -19,7 +20,7 @@ public class Faculty {
 	
 	@Column(name="name")
 	private String name;
-	
+	//I noticed that on controller this has categories like Mammal, Fish and etc. What if you changed this to Species?
 	@Column(name="type")
 	private String type;
 	
