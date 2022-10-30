@@ -12,21 +12,20 @@ import javax.persistence.Table;
 public class Faculty {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
-	@Column(name="id")
+	@Column(name = "id")
 	private int id;
 	
-	@Column(name="name")
+	@Column(name = "name")
 	private String name;
 	
-	@Column(name="type")
+	@Column(name = "type")
 	private String type;
 	
 public Faculty() {
-		
-		
-	}
+				
+}
 
 public Faculty(int id, String name, String type) {
 	this.id = id;
@@ -38,29 +37,21 @@ public int getId() {
 	return id;
 }
 
-
-
 public void setId(int id) {
 	this.id = id;
 }
-
 
 public String getName() {
 	return name;
 }
 
-
-
 public void setName(String name) {
 	this.name = name;
 }
 
-
 public String getType() {
 	return type;
 }
-
-
 
 public void setType(String type) {
 	this.type = type;
@@ -69,5 +60,4 @@ public void setType(String type) {
 @Override
 public String toString() {
 	return "Faculty [id=" + id + ", name=" + name + ", type=" + type + "]";
-}
 }
