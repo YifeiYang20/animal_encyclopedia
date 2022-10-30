@@ -12,18 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.soit.animal_encyclopedia.entity.Faculty;
 
-
 @Controller
 @RequestMapping("/Faculties")
 public class FacultyController {
-	
-	//Upload Faculty Info
+	  //Upload Faculty Info
 		private List<Faculty> theFaculties;
 	
 		@PostConstruct
 		private void loadData() {
-			
-			
 			//Create Faculties
 			Faculty fac1 = new Faculty(1, "Cat", "Mammal");
 			Faculty fac2 = new Faculty(2, "Dog", "Mammal");
@@ -45,16 +41,9 @@ public class FacultyController {
 		//Mapping for "/list"
 		@GetMapping("/list")
 		public String listFaculties(Model theModel) {
-			
-			
 			//Add Faculties to the Spring Model
 			theModel.addAttribute("faculties", theFaculties);
 			
 			return "list-faculties";
-			
-			
 		}
-		
-		
-
 }
