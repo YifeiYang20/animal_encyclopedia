@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+ <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<title>Faculty Directory</title>
+</head>
+<body>
+<div class="container">
+
+	<h4>Animal types</h4>
+	<hr>
+	<table class="table table-bordered">
+		<thead>
+			<tr class="bg-danger">
+				<th>name</th>
+				<th>type</th>
+			</tr>
+		</thead>
+
+
+<tbody>
+<tr th:each="theFaculty : ${faculties}">
+<td th:text="${theFaculty.name}"/>
+<td th:text="${theFaculty.type}"/>
+</tr>
+</tbody>
+
+</table>
+
+</div>
+</body>
+</html>
