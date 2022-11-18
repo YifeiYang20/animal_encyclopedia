@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="faculty")
-public class Faculty {
+@Table(name="animal")
+public class Animal {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -23,12 +23,12 @@ public class Faculty {
 	@Column(name="type")
 	private String type;
 	
-public Faculty() {
+public Animal() {
 		
 		
 	}
 
-public Faculty(int id, String name, String type) {
+public Animal(int id, String name, String type) {
 	this.id = id;
 	this.name = name;
 	this.type = type;
@@ -68,6 +68,9 @@ public void setType(String type) {
 
 @Override
 public String toString() {
-	return "Faculty [id=" + id + ", name=" + name + ", type=" + type + "]";
+	return "Animal [id=" + id + ", name=" + name + ", type=" + type 
+			+ ", getId()=" + getId() + ", getName()=" + getName() + ", getType()=" + getType()
+			+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+			+ "]";
 }
 }
