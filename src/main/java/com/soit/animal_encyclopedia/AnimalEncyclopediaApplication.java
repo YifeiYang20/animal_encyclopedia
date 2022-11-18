@@ -10,4 +10,4 @@ public class AnimalEncyclopediaApplication {
 		SpringApplication.run(AnimalEncyclopediaApplication.class, args);
 	}
 
-}
+}    
