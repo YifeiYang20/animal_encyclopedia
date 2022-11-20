@@ -23,7 +23,15 @@ public class AnimalController {
 	public AnimalController (AnimalService theAnimalService){
 		animalService = theAnimalService;
 	}
-	
+	/**
+	 * Steps to set up the db
+	 * 1. create a database called "admin"
+	 * 2. then make a table called "animal"
+	 * 3. This table will have three columns that are "id"(with auto increment),"name","type"
+	 * 4. then add information of the wanted on the table.
+	 * @param theModel
+	 * @return
+	 */
 	//Mapping for "/list"
 	@GetMapping("/list")
 	public String listAnimals(Model theModel) {
