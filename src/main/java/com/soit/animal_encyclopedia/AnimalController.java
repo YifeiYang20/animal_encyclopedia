@@ -23,6 +23,7 @@ public class AnimalController {
 	public AnimalController (AnimalService theAnimalService){
 		animalService = theAnimalService;
 	}
+	
 	/**
 	 * Steps to set up the db
 	 * 1. create a database called "admin"
