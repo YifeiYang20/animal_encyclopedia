@@ -24,6 +24,13 @@ public class AnimalController {
 		animalService = theAnimalService;
 	}
 	
+	//Mapping for "/login"
+	@GetMapping("/login")
+	public String loginPage(Model theModel) {
+		return "animals/login";
+	}
+	
+	
 	//Mapping for "/list"
 	@GetMapping("/list")
 	public String listAnimals(Model theModel) {
