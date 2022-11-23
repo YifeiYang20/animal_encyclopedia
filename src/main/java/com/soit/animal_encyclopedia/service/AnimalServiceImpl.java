@@ -25,6 +25,8 @@ public class AnimalServiceImpl implements AnimalService {
 	@Override
 	public List<Animal> findAll() {
 		// TODO Auto-generated method stub
+		
+		//do you want it to be order by name you should make it order by type then by name
 		return animalRepository.findAllByOrderByName();
 	}
 

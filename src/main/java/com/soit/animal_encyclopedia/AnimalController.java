@@ -86,6 +86,31 @@ public class AnimalController {
 		
 	}
 	
+	
+	// are you trying delete an animal from thier list as long as you are sign in or in general
+	//app.post('/Updated', function(request, response))
+	//{
+		//var connection = request.app.get('loginId');
+	//	if (request.session.loggin) 
+	//	{
+			//connection.query('DELETE FROM award wHeRe id=? AND issuerID in (SELECT id FROM accounts where username =?)'), request.body.id,
+			//	request.session.username],function(error,results, fields)
+				//	{
+				//	if(loginId) {
+						//Remove Animal
+					//	animalService.deleteById(theId);
+						
+						
+						//Return to the Animals directory
+					//	return "redirect:/Animals/list";
+					//}
+				//else 
+				//{
+				//	console.log("No access");
+				//}
+				//	}
+		//}
+	//}
 	@GetMapping("/delete")
 	public String delete(@RequestParam("animalId") int theId) {
 		
