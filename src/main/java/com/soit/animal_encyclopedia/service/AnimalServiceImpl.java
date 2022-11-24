@@ -12,8 +12,6 @@ import com.soit.animal_encyclopedia.entity.Animal;
 
 @Service
 public class AnimalServiceImpl implements AnimalService {
-	
-	
 	private AnimalRepository animalRepository;
 	
 	@Autowired
@@ -21,7 +19,6 @@ public class AnimalServiceImpl implements AnimalService {
 		animalRepository = theAnimalRepository;
 	}
 	
-
 	@Override
 	public List<Animal> findAll() {
 		// TODO Auto-generated method stub
@@ -30,37 +27,27 @@ public class AnimalServiceImpl implements AnimalService {
 
 	@Override
 	public Animal findById(int theId) {
-	
-		Optional<Animal> animalid = animalRepository.findById(theId);
-		
-		Animal theAnimal = null;
-		
+		Optional<Animal> animalid = animalRepository.findById(theId);	
+		Animal theAnimal = null;	
 		if(animalid.isPresent()) {
-			theAnimal = animalid.get();
-			
-			
-			
+			theAnimal = animalid.get();		
 		}
 		else
-		{
-			
+		{		
 			//animal not found
 			throw new RuntimeException("The AnimalId you've entered is invalid - " + theId);
 		}
-		
+
 		return theAnimal;
 	}
 
 	@Override
 	public void save(Animal theAnimal) {
 		animalRepository.save(theAnimal);
-		
 	}
 
 	@Override
 	public void deleteById(int theId) {
 		animalRepository.deleteById(theId);
-
 	}
-
 }

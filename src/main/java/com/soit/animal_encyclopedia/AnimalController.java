@@ -15,11 +15,8 @@ import com.soit.animal_encyclopedia.service.AnimalService;
 
 @Controller
 @RequestMapping("/Animals")
-public class AnimalController {
-	
-	
+public class AnimalController {	
 	public AnimalService animalService;
-	
 	public AnimalController (AnimalService theAnimalService){
 		animalService = theAnimalService;
 	}
@@ -27,39 +24,26 @@ public class AnimalController {
 	//Mapping for "/list"
 	@GetMapping("/list")
 	public String listAnimals(Model theModel) {
-		
-		
 		//Retrieve animals from the Database
 		List<Animal> theAnimals = animalService.findAll();
-		
-		
+
 		//Add Animals to the Spring Model
 		theModel.addAttribute("animals", theAnimals);
 		
-		return "animals/list-animals";
-		
-		
+		return "animals/list-animals";	
 	}
 
 	@GetMapping("/viewAddForm")
-	public String viewAddForm(Model theModel) {
-		
-		
-		
+	public String viewAddForm(Model theModel) {	
 		//Model attribute for data binding
-		Animal theAnimal = new Animal();
+		Animal theAnimal = new Animal();		
+		theModel.addAttribute("animal", theAnimal);	
 		
-		theModel.addAttribute("animal", theAnimal);
-		
-		
-		return "animals/animal-form";
-		
+		return "animals/animal-form";	
 	}
 	
 	@GetMapping("/viewUpdateForm")
-	public String viewUpdateForm(@RequestParam("animalId") int theId, Model theModel) {
-		
-		
+	public String viewUpdateForm(@RequestParam("animalId") int theId, Model theModel) {	
 		//Retrieve the animal info from  the service layer
 		Animal theAnimal = animalService.findById(theId);
 		
@@ -73,29 +57,21 @@ public class AnimalController {
 	
 	
 	@PostMapping("/save")
-	public String saveAnimal(@ModelAttribute("animal") Animal theAnimal) {
-		
-		
-		
+	public String saveAnimal(@ModelAttribute("animal") Animal theAnimal) {		
 		//Register the Animal
 		animalService.save(theAnimal);
-		
-		
+				
 		//Block duplicates submission for accidental refresh
-		return "redirect:/Animals/list";
-		
+		return "redirect:/Animals/list";		
 	}
 	
 	@GetMapping("/delete")
-	public String delete(@RequestParam("animalId") int theId) {
-		
+	public String delete(@RequestParam("animalId") int theId) {		
 		//Remove Animal
 		animalService.deleteById(theId);
-		
-		
+				
 		//Return to the Animals directory
-		return "redirect:/Animals/list";
-		
+		return "redirect:/Animals/list";		
 	}
 	
 }
