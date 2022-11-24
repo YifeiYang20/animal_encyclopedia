@@ -17,7 +17,6 @@ import com.soit.animal_encyclopedia.service.AnimalService;
 @RequestMapping("/Animals")
 public class AnimalController {
 	
-	
 	public AnimalService animalService;
 	
 	public AnimalController (AnimalService theAnimalService){
@@ -28,37 +27,28 @@ public class AnimalController {
 	@GetMapping("/list")
 	public String listAnimals(Model theModel) {
 		
-		
 		//Retrieve animals from the Database
 		List<Animal> theAnimals = animalService.findAll();
-		
 		
 		//Add Animals to the Spring Model
 		theModel.addAttribute("animals", theAnimals);
 		
 		return "animals/list-animals";
-		
-		
 	}
 
 	@GetMapping("/viewAddForm")
 	public String viewAddForm(Model theModel) {
-		
-		
 		
 		//Model attribute for data binding
 		Animal theAnimal = new Animal();
 		
 		theModel.addAttribute("animal", theAnimal);
 		
-		
 		return "animals/animal-form";
-		
 	}
 	
 	@GetMapping("/viewUpdateForm")
 	public String viewUpdateForm(@RequestParam("animalId") int theId, Model theModel) {
-		
 		
 		//Retrieve the animal info from  the service layer
 		Animal theAnimal = animalService.findById(theId);
@@ -69,21 +59,15 @@ public class AnimalController {
 		//Redirect us to the animal form
 		return "animals/animal-form";
 	}
-	
-	
-	
+		
 	@PostMapping("/save")
 	public String saveAnimal(@ModelAttribute("animal") Animal theAnimal) {
-		
-		
 		
 		//Register the Animal
 		animalService.save(theAnimal);
 		
-		
 		//Block duplicates submission for accidental refresh
 		return "redirect:/Animals/list";
-		
 	}
 	
 	@GetMapping("/delete")
@@ -91,11 +75,8 @@ public class AnimalController {
 		
 		//Remove Animal
 		animalService.deleteById(theId);
-		
-		
+	
 		//Return to the Animals directory
 		return "redirect:/Animals/list";
-		
 	}
-	
 }

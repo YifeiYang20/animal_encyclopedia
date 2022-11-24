@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.soit.animal_encyclopedia.entity.Animal;
 
 public interface AnimalRepository extends JpaRepository<Animal, Integer> {
-	
-	public List<Animal>findAllByOrderByName();
 
+	public List<Animal> findAllByOrderByName();
+	
 }

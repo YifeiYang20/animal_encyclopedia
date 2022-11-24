@@ -2,8 +2,10 @@
 html {
   box-sizing: border-box;
 }
+
 *,
-*::before, *::after {
+*::before, 
+*::after {
   box-sizing: inherit;
 }
 
@@ -16,7 +18,6 @@ body {
   display: table;
   clear: both;
 }
-
 
 /*basic tags----------------------------------------------------*/
 img {
@@ -51,7 +52,6 @@ h2,
   margin-top: 0;
   margin-bottom: 1rem;
 }
-
 
 /*specific----------------------------------------------------*/
 .index-image::before {

@@ -9,10 +9,8 @@ import org.springframework.stereotype.Service;
 import com.soit.animal_encyclopedia.dao.AnimalRepository;
 import com.soit.animal_encyclopedia.entity.Animal;
 
-
 @Service
 public class AnimalServiceImpl implements AnimalService {
-	
 	
 	private AnimalRepository animalRepository;
 	
@@ -21,10 +19,8 @@ public class AnimalServiceImpl implements AnimalService {
 		animalRepository = theAnimalRepository;
 	}
 	
-
 	@Override
 	public List<Animal> findAll() {
-		// TODO Auto-generated method stub
 		return animalRepository.findAllByOrderByName();
 	}
 
@@ -32,18 +28,12 @@ public class AnimalServiceImpl implements AnimalService {
 	public Animal findById(int theId) {
 	
 		Optional<Animal> animalid = animalRepository.findById(theId);
+		Animal theAnimal;
 		
-		Animal theAnimal = null;
-		
-		if(animalid.isPresent()) {
+		if (animalid.isPresent()) {
 			theAnimal = animalid.get();
-			
-			
-			
 		}
-		else
-		{
-			
+		else {
 			//animal not found
 			throw new RuntimeException("The AnimalId you've entered is invalid - " + theId);
 		}
@@ -54,13 +44,10 @@ public class AnimalServiceImpl implements AnimalService {
 	@Override
 	public void save(Animal theAnimal) {
 		animalRepository.save(theAnimal);
-		
 	}
 
 	@Override
 	public void deleteById(int theId) {
 		animalRepository.deleteById(theId);
-
 	}
-
 }
