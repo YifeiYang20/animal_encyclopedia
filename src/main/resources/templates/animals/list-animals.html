@@ -51,6 +51,8 @@
 				<a th:href="@{/Animals/viewUpdateForm(animalId=${theAnimal.id})}"
 				class="btn btn-light btn-sm">Update</a>
 				<!-- -Delete Button -->
+				<!-- should have delete only if signed in -->>
+				
 				<a th:href="@{/Animal/delete(animalId=${theAnimal.id})}"
 				class="btn btn-danger btn-sm"onclick="if(!(confirm('Please confirm that you to remove this animal')))return false">Delete</a>
 				</td>
