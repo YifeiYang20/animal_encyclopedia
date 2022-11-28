@@ -12,14 +12,21 @@
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
 	
+	        <link href="../../main.css" rel="stylesheet">
+	
+	
 <title>Register Animal</title>
 </head>
 
 
 
 <body>
-
-<div class="container">
+<section class="index">
+            <div class="index-wrap">
+               <div class="index-attr">
+                    <img src="../../list.jpg">
+                </div>          
+                <div class="container">
 
 <h4>Pet Information Dictionary</h4>
 <a class="btn btn-light" data-toggle="collapse" th:href="@{/Animals/list}" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -40,6 +47,19 @@ class="form-control mb-4 col-4" placeholder="Name">
 <input type="text" th:field="*{type}"
 class="form-control mb-4 col-4" placeholder="Type">
 
+<input type="text"
+class="form-control mb-4 col-4" placeholder="Information">
+
+
+
+<input type="text"
+class="form-control mb-4 col-4" placeholder="Vaccine">
+
+
+
+<input type="text"
+class="form-control mb-4 col-4" placeholder="feed">
+
 
 <button type="submit" class="btn btn-danger col-2">Register</button>
 
@@ -49,6 +69,10 @@ class="form-control mb-4 col-4" placeholder="Type">
 
 
 </div>
+
+                                  
+            </div>    
+        </section>
 
 
 
