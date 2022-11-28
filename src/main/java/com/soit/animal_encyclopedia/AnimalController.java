@@ -70,7 +70,19 @@ public class AnimalController {
 		return "animals/animal-form";
 	}
 	
-	
+	@GetMapping("/viewMoreInfo")
+	public String viewMoreInfo(@RequestParam("animalId") int theId, Model theModel) {
+		
+		
+		//Retrieve the animal info from  the service layer
+		Animal theAnimal = animalService.findById(theId);
+		
+		//Pre-populate the form by setting the animal as a model attribute
+		theModel.addAttribute("animal", theAnimal);
+		
+		//Redirect us to the animal form
+		return "animals/MoreInfo";
+	}
 	
 	@PostMapping("/save")
 	public String saveAnimal(@ModelAttribute("animal") Animal theAnimal) {

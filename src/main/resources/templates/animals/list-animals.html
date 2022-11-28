@@ -37,7 +37,7 @@
 			<tr class="bg-danger">
 				<th>Name</th>
 				<th>Type</th>
-				<th>Update Info</th>
+				<th>More Info</th>
 			</tr>
 		</thead>
 
@@ -53,6 +53,9 @@
 				<!-- -Delete Button -->
 				<a th:href="@{/Animals/delete(animalId=${theAnimal.id})}"
 				class="btn btn-danger btn-sm"onclick="if(!(confirm('Please confirm that you to remove this animal')))return false">Delete</a>
+				<!-- More Info Button -->
+				<a th:href="@{/Animals/viewMoreInfo(animalId=${theAnimal.id})}"
+				class="btn btn-light btn-sm">More Information about this pet</a>
 				</td>
 			</tr>
 		</tbody>
