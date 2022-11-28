@@ -5,6 +5,8 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+<link href="../../main.css" rel="stylesheet">	
 
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
@@ -14,8 +16,14 @@
 <title>Animal List</title>
 </head>
 <body>
+<section class="index">
+<div class="index-wrap">
+<div class="index-attr">
+                        <img src="../../list.jpg">
+                    </div>
 	<div class="container">
-		<h4>Pet Information</h4>
+	<h4>Pet Information</h4>
+		
 		<a class="btn btn-light" data-toggle="collapse"
 			th:href="@{/Animals/list}" role="button" aria-expanded="false"
 			aria-controls="collapseExample"> List of Animals</a>
@@ -30,16 +38,18 @@
 class="form-control mb-4 col-4" placeholder="Name">
 
 <input type="text" th:field="*{info}"
-class="form-control mb-4 col-10" placeholder="Info">
+class="form-control mb-4 col-10" placeholder="Info" style="width:370px;height:150px;">
 
 <input type="text" th:field="*{origin}"
 class="form-control mb-4 col-4" placeholder="Origin">
 
 <input type="text" th:field="*{feed}"
-class="form-control mb-4 col-4" placeholder="Feed">
+class="form-control mb-4 col-4" placeholder="Feed" style="width:370px;height:150px;">
 
 </form>
 	</div>
+	</div>
+</section>
 
 </body>
 </html>
