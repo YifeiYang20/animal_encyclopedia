@@ -22,7 +22,7 @@
 <div class="container">
 
 <h4>Pet Information Dictionary</h4>
-<a class="btn btn-light" data-toggle="collapse" th:href="@{/Animals/list}" role="button" aria-expanded="false" aria-controls="collapseExample">
+<a class="btn btn-dark" data-toggle="collapse" th:href="@{/Animals/list}" role="button" aria-expanded="false" aria-controls="collapseExample" style="background-color:#EA8D1C;">
 	List of Animals</a>             
 <hr>
 <p class="h4 mb-4">Register Animal</p>
@@ -35,13 +35,21 @@
 
 
 <input type="text" th:field="*{name}"
-class="form-control mb-4 col-4" placeholder="Name">
+class="form-control mb-4 col-4" style="background-color:#FCE9B8;" placeholder="Name">
 
 <input type="text" th:field="*{type}"
-class="form-control mb-4 col-4" placeholder="Type">
+class="form-control mb-4 col-4" style="background-color:#FCE9B8;" placeholder="Type">
 
+<input type="text" th:field="*{info}"
+class="form-control mb-4 col-4" style="background-color:#FCE9B8;" placeholder="Info">
 
-<button type="submit" class="btn btn-danger col-2">Register</button>
+<input type="text" th:field="*{origin}"
+class="form-control mb-4 col-4" style="background-color:#FCE9B8;" placeholder="Origin">
+
+<input type="text" th:field="*{feed}"
+class="form-control mb-4 col-4" style="background-color:#FCE9B8;" placeholder="Feed">
+
+<button type="submit" class="btn btn-danger col-2" style="background-color:#EA8D1C;">Register</button>
 
 
 

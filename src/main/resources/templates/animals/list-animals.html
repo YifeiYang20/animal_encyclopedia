@@ -30,11 +30,12 @@
 	<hr>
 	
 	<!-- Create a button to add new Faculty -->
-	<a th:href="@{/Animals/viewAddForm}" class="btn btn-dark">Add New Animal</a>
+	<a th:href="@{/Animals/viewAddForm}" class="btn btn-dark" style="background-color:#EA8D1C;">Add New Animal</a>
+	<hr>
 	
-	<table class="table table-bordered table-dark">
+	<table class="table table-bordered" style="background-color:#FCE9B8;">
 		<thead>
-			<tr class="bg-danger">
+			<tr class="bg" style="background-color:#EEAC00;color:#ffffff;">
 				<th>Name</th>
 				<th>Type</th>
 				<th>More Info</th>
@@ -49,13 +50,13 @@
 				<!-- Update Button -->
 				<td>
 				<a th:href="@{/Animals/viewUpdateForm(animalId=${theAnimal.id})}"
-				class="btn btn-light btn-sm">Update</a>
+				class="btn btn-danger btn-sm" style="background-color:#EA8D1C;">Update</a>
 				<!-- -Delete Button -->
 				<a th:href="@{/Animals/delete(animalId=${theAnimal.id})}"
-				class="btn btn-danger btn-sm"onclick="if(!(confirm('Please confirm that you to remove this animal')))return false">Delete</a>
+				class="btn btn-danger btn-sm"onclick="if(!(confirm('Please confirm that you to remove this animal')))return false" style="background-color:#EA8D1C;">Delete</a>
 				<!-- More Info Button -->
 				<a th:href="@{/Animals/viewMoreInfo(animalId=${theAnimal.id})}"
-				class="btn btn-light btn-sm">More Information about this pet</a>
+				class="btn btn-danger btn-sm" style="background-color:#EA8D1C;">More Information about this pet</a>
 				</td>
 			</tr>
 		</tbody>

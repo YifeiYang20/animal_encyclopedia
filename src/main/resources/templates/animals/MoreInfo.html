@@ -16,9 +16,9 @@
 <body>
 	<div class="container">
 		<h4>Pet Information</h4>
-		<a class="btn btn-light" data-toggle="collapse"
+		<a class="btn btn-dark" data-toggle="collapse"
 			th:href="@{/Animals/list}" role="button" aria-expanded="false"
-			aria-controls="collapseExample"> List of Animals</a>
+			aria-controls="collapseExample" style="background-color:#EA8D1C;"> List of Animals</a>
 		<hr>
 		
 		<form action="#" th:action="@{/Animals/save}" th:object="${animal}" method="POST">
@@ -27,16 +27,16 @@
 <input type="hidden" th:field="*{id}">
 
 <input type="text" th:field="*{name}"
-class="form-control mb-4 col-4" placeholder="Name">
+class="form-control mb-4 col-4" style="background-color:#FCE9B8;" placeholder="Name">
 
 <input type="text" th:field="*{info}"
-class="form-control mb-4 col-10" placeholder="Info">
+class="form-control mb-4 col-4" style="background-color:#FCE9B8;" placeholder="Info">
 
 <input type="text" th:field="*{origin}"
-class="form-control mb-4 col-4" placeholder="Origin">
+class="form-control mb-4 col-4" style="background-color:#FCE9B8;" placeholder="Origin">
 
 <input type="text" th:field="*{feed}"
-class="form-control mb-4 col-4" placeholder="Feed">
+class="form-control mb-4 col-4" style="background-color:#FCE9B8;" placeholder="Feed">
 
 </form>
 	</div>

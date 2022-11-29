@@ -24,6 +24,23 @@ public class AnimalController {
 		animalService = theAnimalService;
 	}
 	
+	
+	@GetMapping("/login")
+	public String loginAnimals(Model theModel) {
+		
+		
+		//Retrieve animals from the Database
+		List<Animal> theAnimals = animalService.findAll();
+		
+		
+		//Add Animals to the Spring Model
+		theModel.addAttribute("animals", theAnimals);
+		
+		return "animals/login";
+		
+		
+	}
+	
 	//Mapping for "/list"
 	@GetMapping("/list")
 	public String listAnimals(Model theModel) {
@@ -40,6 +57,7 @@ public class AnimalController {
 		
 		
 	}
+	
 
 	@GetMapping("/viewAddForm")
 	public String viewAddForm(Model theModel) {
