@@ -6,6 +6,8 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+<link href="../../main.css" rel="stylesheet">	
+
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -14,6 +16,11 @@
 <title>Animal List</title>
 </head>
 <body>
+<section class="index">
+<div class="index-wrap">
+<div class="index-attr">
+                        <img src="../../list.jpg">
+                    </div>
 	<div class="container">
 		<h4>Pet Information</h4>
 		<a class="btn btn-dark" data-toggle="collapse"
@@ -29,17 +36,18 @@
 <input type="text" th:field="*{name}"
 class="form-control mb-4 col-4" style="background-color:#FCE9B8;" placeholder="Name">
 
-<input type="text" th:field="*{info}"
-class="form-control mb-4 col-4" style="background-color:#FCE9B8;" placeholder="Info">
+<textarea type="text" th:field="*{info}"
+class="form-control mb-4 col-10" placeholder="Info" style="width:370px;height:150px;background-color:#FCE9B8;"></textarea>
 
 <input type="text" th:field="*{origin}"
 class="form-control mb-4 col-4" style="background-color:#FCE9B8;" placeholder="Origin">
 
-<input type="text" th:field="*{feed}"
-class="form-control mb-4 col-4" style="background-color:#FCE9B8;" placeholder="Feed">
+<textarea type="text" th:field="*{feed}"
+class="form-control mb-4 col-4" placeholder="Feed" style="width:370px;height:150px;background-color:#FCE9B8;"></textarea>
 
 </form>
 	</div>
-
+</div>
+</section>
 </body>
 </html>
